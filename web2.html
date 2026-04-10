@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Chargers</title>
+   <link rel="stylesheet" href="css/accessories/accessories.css">
+   <link rel="stylesheet" href="style1.css"> 
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/Accessories img/logo.png" alt="logo">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Mobile Phones ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="apple.html">Apple</a></li>
+            <li><a href="samsung.html">Samsung</a></li>
+            <li><a href="huawei.html">Huawei</a></li>
+            <li><a href="honor.html">Honor</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Laptops ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="mac.html">Mac</a></li>
+            <li><a href="asus.html">Asus</a></li>
+            <li><a href="acer.html">Acer</a></li>
+            <li><a href="hp.html">HP</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Accessories ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="web2.html">Phone Chargers</a></li>
+            <li><a href="web5.html">Powerbanks</a></li>
+            <li><a href="web3.html">Headphone & Airpods</a></li>
+            <li><a href="web4.html">Others</a></li>
+          </ul>
+        </li>
+
+        <li><a href="smartwatch.html">Smart Watch</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      const dropdowns = document.querySelectorAll(".dropdown");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      const navItems = navLinks.querySelectorAll("a");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Dropdown functionality for desktop
+      dropdowns.forEach((dropdown) => {
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+        const menu = dropdown.querySelector(".dropdown-menu");
+
+        // Desktop: hover
+        dropdown.addEventListener("mouseenter", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.add("active");
+            menu.style.display = "block";
+          }
+        });
+
+        dropdown.addEventListener("mouseleave", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.remove("active");
+            menu.style.display = "none";
+          }
+        });
+
+        // Mobile: click
+        toggle.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle("active");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+          dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove("active");
+            dropdown.querySelector(".dropdown-menu").style.display = "none";
+          });
+        }
+      });
+    </script>
+
+
+     <h1 class="title">Phone Chargers</h1>
+
+    <div class="container">
+        <div class="product">
+            <img src="images/Accessories img/char-1.jpg" alt="iPhone Apple Charger With Lightning Cable ">
+            <h3>iPhone Apple Charger With Lightning Cable</h3>
+            <p class="price">Rs3190.00LKR*</p>
+            <p>IPhone 14 / iPhone 14 pro / iPhone 14 plus / iPhone 14 pro max / iPhone 13 / iPhone 13 Pro / iPhone 13 Pro Max / iPhone 13 mini /iPhone 12 / iPhone 12 ...</p>
+          <button onclick="buyNow('iPhone Apple Charger With Lightning Cable', 3190 , 'images/Accessories img/char-1.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-2.jpg" alt="20W USB C Fast Charger Plug">
+            <h3>20W USB C Fast Charger Plug</h3>
+            <p class="price">Rs4190.00LKR*</p>
+            <p>| I phone charger plug for iPhone 13/13 Pro/13 Pro Max 12/12 Pro/11/Pad,</p><br><br>
+          <button onclick="buyNow('0W USB C Fast Charger Plug', 4190 , 'images/Accessories img/char-2.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-3.jpg" alt="2 in 1 Apple iPhone Charger 3/3GS/4/4S ">
+            <h3>2 in 1 Apple iPhone Charger 3/3GS/4/4S </h3>
+            <p class="price">Rs2890.00LKR*</p>
+            <p>2 in 1 Apple iPhone Charger 3/3GS/4/4S, 2 in 1 iPhone Charger with superior speed and optimal safety. Apple USB Data & Sync Charging Cable with Dock ...</p>
+            <button onclick="buyNow(' in 1 Apple iPhone Charger 3/3GS/4/4S ', 2890 , 'images/Accessories img/char-3.jpg')">Buy Now</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/char-4.jpg" alt="Anker Zolo 30W Compact USB C GaN Charger Adapter A2698k11">
+            <h3>Anker Zolo 30W Compact USB C GaN Charger <br> Adapter A2698k11</h3>
+            <p class="price">Rs5690.00LKR*</p>
+            <p>30W Fast Charging, Superior Temperature Management, Compact and Powerful, Advanced GaN II Technology, Stylishly Cool Charging, 12 Month Warranty</p>
+            <button onclick="buyNow(' Anker Zolo 30W Compact USB C GaN Charger ', 5690 , 'images/Accessories img/char-4.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-5.jpg" alt="Samsung 25W Super Fast Charging Power Adapter ">
+            <h3>Samsung 25W Super Fast Charging Power Adapter <br>-Black </h3>
+            <p class="price">Rs990.00LKR*</p>
+            <p> Samsung 25W Super Fast Charging Power Adapter Compatible with various devices Super Fast Charging to stay ready Enjoy the flexibility ...</p>
+            <button onclick="buyNow('Samsung 25W Super Fast Charging Power Adapter ', 990 , 'images/Accessories img/char-5.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-6.jpg" alt="Samsung Super Fast Wireless Charger">
+            <h3>Samsung Super Fast Wireless Charger Duo (with Adapter and Cable) Dark Gray</h3>
+            <p class="price">Rs20,203.00LKR*</p>
+            <p>Charge fast with Fast Charging, One charger, two devices, Power your device safely, 06 Month Warranty</p>
+            <button onclick="buyNow('Samsung Super Fast Wireless Charger Duo (with Adapter and Cable) Dark Gray ', 20203 , 'images/Accessories img/char-6.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-7.jpg" alt="T500 Smart Watch Charger">
+            <h3>T500 Smart Watch Charger Charging Dock ZQWINT Magnetic T500/T55 Watch Charger, 2pin Magnetic Charging Cable Charging Pad, Black | Daraz.lk</h3>
+            <p class="price">Rs8500.00LKR*</p>
+            <p>Output short circuit protection, overvoltage and overload filter protection, Imported components are used, and the real machine test is aging and has ...</p>
+            <button onclick="buyNow('Samsung 25W Super Fast Charging Power Adapter ', 990 , 'images/Accessories img/char-7.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-8.jpg" alt="Universal USB Magnetic Wireless">
+            <h3>Universal USB Magnetic Wireless Charger Cord Smartwatch Wireless Charging Cable</h3>
+            <p class="price">Rs5890.00LKR*</p>
+            <p> PC+ABS, Cable Length: Approx. 40cm, Wire Core: pure-copper, Interface: USB, Output: 5V/1A</p>
+            <button onclick="buyNow('Universal USB Magnetic Wireless Charger Cord Smartwatch Wireless Charging Cable ', 5890 , 'images/Accessories img/char-8.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-9.jpg" alt="Universal Li-Ion Battery Charger">
+            <h3>Universal Li-Ion Battery Charger <br>for Cell Mobile Phone Batteries | Daraz.lk</h3>
+            <p class="price">Rs855.00LKR*</p>
+            <p>Output short circuit protection, overvoltage and overload filter protection</p>
+            <button onclick="buyNow('Universal USB Magnetic Wireless Charger Cord Smartwatch Wireless Charging Cable ', 5890 , 'images/Accessories img/char-8.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-11.jpg" alt="160W Fast USB Charger for Multiple Devices, 6-in-1">
+            <h3>160W Fast USB Charger for Multiple Devices, 6-in-1</h3>
+            <p class="price">Rs2860.00LKR*</p>
+            <p>Multi-Device Charger: Equipped with 3 USB-C and 3 USB-A ports, this charger offers a total output of 112W, making it powerful enough to charge a ...</p>
+            <button onclick="buyNow('160W Fast USB Charger for Multiple Devices, 6-in-1', 2860 , 'images/Accessories img/char-11.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/char-10.jpg" alt=" USB 36W Car Charger 2 Port USB Car Charger">
+            <h3>Aspor A905 Dual USB 36W Car Charger 2 Port USB <br> Car Charger with LED Light Mobile Phone Charger</h3>
+            <p class="price">Rs1500.00LKR*</p>
+            <p>Universal Adapter, CAR CHARGER, Fast Charger., material. PC Fireproof Material, ABS, Gan, CORK., function. Qi, QC4.0, QC3.0, PD, PD 3.0, PD ...</p>
+            <button onclick="buyNow('Aspor A905 Dual USB 36W Car Charger 2 Port USB', 1500 , 'images/Accessories img/char-10.jpg')">Buy Now</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/cab-1.webp" alt="USB 3.0 to USB Cable Type A Male to Male 60CM">
+            <h3>USB 3.0 to USB Cable Type A Male to Male 60CM</h3>
+            <p class="price">Rs550.00LKR*</p>
+            <p>High Quality USB to USB Cable Type A Male to Male USB 3.0 Extension Cable for Hard Disk, Webcam, USB 3.0 Cable Extenders...etc.</p>
+            <button onclick="buyNow('USB 3.0 to USB Cable Type A Male to Male 60CM', 550 , 'images/Accessories img/cab-1.webp')">Buy Now</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/cab-2.jpg" alt="USB TO USB CABLE">
+            <h3>USB TO USB CABLE</h3>
+            <p class="price">Rs690.00LKR*</p>
+            <p>USB 3.0 A Extension. High performance USB 3.0 Male to Male cable connects USB host computers with USB 3.0 type A port to USB peripherals,</p>
+            <button onclick="buyNow('USB TO USB CABLE', 690 , 'images/Accessories img/cab-2.jpg')">Buy Now</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/cab-3.jpg" alt="Baseus Glimmer Series 2.4A USB Lightning Cable">
+            <h3>Baseus Glimmer Series 2.4A USB Lightning Cable</h3>
+            <p class="price">Rs1,590.00LKR*</p>
+            <button onclick="buyNow('Baseus Glimmer Series 2.4A USB Lightning Cable', 1590 , 'images/Accessories img/cab-3.jpg')">Buy Now</button>
+            <button>BUY NOW</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/cab-4.png" alt="Ugreen USB-A to Lightning Cable">
+            <h3>Ugreen USB-A to Lightning Cable</h3>
+            <p class="price">Rs4,200.00LKR*</p>
+            <p>- MFI Certified., - Suitable for iPhone, iPad & iPod., - Function - Charging & Data Sync., - 5V/2.4A., - Speed up to 480Mbps.</p>
+            <button onclick="buyNow('Ugreen USB-A to Lightning Cable', 4200 , 'images/Accessories img/cab-4.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/cab-5.jpg" alt="Type C to USB Cable">
+            <h3>Type C to USB Cable</h3>
+            <p class="price">Rs620.00LKR*</p>
+            <p>Designed by StarTech.com, this 2m USB-C meets the everyday demands of charging and syncing your mobile devices</p>
+            <button onclick="buyNow(' Type C to USB Cable', 620 , 'images/Accessories img/cab-5.jpg')">Buy Now</button>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+      <div class="footer-brand">
+        <h2>Tech Avenue</h2>
+        <p>Your one-stop shop for smartphones & accessories</p>
+      </div>
+
+      <div class="container">
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Mobile Phones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Support</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Warranty & Repairs</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:support@techavenue.com">support@techavenue.com</a>
+            </li>
+            <li><a href="tel:+94738756343">+94 738 756 343</a></li>
+            <li><a href="#">Find a Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <img
+                src="images/Accessories img/facebook-svgrepo-com (2).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Facebook</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/instagram-svgrepo-com (1).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Instagram</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/tiktok-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">TikTok</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/youtube-you-tube-video-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tech Avenue. All rights reserved.</p>
+      </div>
+    </footer>
+
+    </div>
+          <script src="js/buy now/items.js"></script>
+
+</body>
+</html>

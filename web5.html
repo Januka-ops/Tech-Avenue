@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power banks</title>
+    <link rel="stylesheet" href="css/accessories/accessories.css">
+    <link rel="stylesheet" href="style1.css"> 
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/Accessories img/logo.png" alt="logo">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Mobile Phones ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="apple.html">Apple</a></li>
+            <li><a href="samsung.html">Samsung</a></li>
+            <li><a href="huawei.html">Huawei</a></li>
+            <li><a href="honor.html">Honor</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Laptops ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="mac.html">Mac</a></li>
+            <li><a href="asus.html">Asus</a></li>
+            <li><a href="acer.html">Acer</a></li>
+            <li><a href="hp.html">HP</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Accessories ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="web2.html">Phone Chargers</a></li>
+            <li><a href="web5.html">Powerbanks</a></li>
+            <li><a href="web3.html">Headphone & Airpods</a></li>
+            <li><a href="web4.html">Others</a></li>
+          </ul>
+        </li>
+
+        <li><a href="smartwatch.html">Smart Watch</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      const dropdowns = document.querySelectorAll(".dropdown");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      const navItems = navLinks.querySelectorAll("a");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Dropdown functionality for desktop
+      dropdowns.forEach((dropdown) => {
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+        const menu = dropdown.querySelector(".dropdown-menu");
+
+        // Desktop: hover
+        dropdown.addEventListener("mouseenter", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.add("active");
+            menu.style.display = "block";
+          }
+        });
+
+        dropdown.addEventListener("mouseleave", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.remove("active");
+            menu.style.display = "none";
+          }
+        });
+
+        // Mobile: click
+        toggle.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle("active");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+          dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove("active");
+            dropdown.querySelector(".dropdown-menu").style.display = "none";
+          });
+        }
+      });
+    </script>
+
+
+
+    <h1 class="title">Power banks</h1>
+
+
+    <div class="container">
+        <div class="product">
+            <img src="images/Accessories img/pow-1.jpg" alt="Aspor A316 22.5W 20000mAh Power Bank">
+            <h3>Aspor A316 22.5W 20000mAh Power Bank</h3>
+            <p class="price">Rs4,950.00LKR*</p>
+            <p>Portable Power Bank, 20000mAh, 22.5W Fast Charge</p>
+            <button onclick="buyNow('Aspor A316 22.5W 20000mAh Power Bank', 4950 , 'images/Accessories img/pow-1.jpg')">Buy Now</button>       
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/pow-2.jpg" alt="Anker 323 USB-C 10000mAh Power Bank">
+            <h3>Anker 323 USB-C 10000mAh Power Bank</h3>
+            <p class="price">Rs13,702.00LKR*</p>
+            <p>Simultaneous Charging, Extremely Safe to Use, 6 Months Warranty</p>
+            <button onclick="buyNow('Anker 323 USB-C 10000mAh Power Bank', 13702 , 'images/Accessories img/pow-2.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pow-3.jpg" alt="Baseus 5000mAh 20W MagPro Magnetic Bracket Wireless Fast-Charging Power Bank">
+            <h3>Baseus 5000mAh 20W MagPro Magnetic Bracket Wireless Fast-Charging Power Bank</h3>
+            <p class="price">Rs10,950.00LKR*</p>
+            <p>Snap to Charge, PD 20W USB-C Fast Charging, 7.5W MagSafe Charging, Built-in Folding Phone Stand, Slim & Compact, Charging While ...</p>
+            <button onclick="buyNow('Baseus 5000mAh 20W MagPro Magnetic Bracket Wireless Fast-Charging Power Bank', 10950 , 'images/Accessories img/pow-3.jpg')">Buy Now</button>       
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/pow-4.jpg" alt="15W Magnetic Wireless Powerbank">
+            <h3>15W Magnetic Wireless Powerbank</h3>
+            <p class="price">Rs10,000.00LKR*</p>
+            <p> 20000mAh 15W Magnetic Wireless Powerbank with Natural Titanium F</p>
+            <button onclick="buyNow('15W Magnetic Wireless Powerbank', 10000 , 'images/Accessories img/pow-4.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pow-5.jpg" alt="Power Fob Mini Power Bank 3350mAh">
+            <h3>Power Fob Mini Power Bank 3350mAh</h3>
+            <p class="price">Rs10,954.00LKR*</p>
+            <p>Get the iWALK Mini Power Bank - 3350mAh Portable Charger for iPhone, Airpods and more.</p>
+            <button onclick="buyNow('Power Fob Mini Power Bank 3350mAh', 10954 , 'images/Accessories img/pow-5.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pow-6.jpg" alt="Max-1128 Power Bank 20000MAH-White">
+            <h3>Max-1128 Power Bank 20000MAH-White</h3>
+            <p class="price">Rs9,899.00LKR*</p>
+            <p>Built-in Cables: Includes Type-C and Lightning cables for seamless charging without the hassle of carrying extra cables., USB-C Input: Supports ...</p>
+            <button onclick="buyNow('Max-1128 Power Bank 20000MAH-White', 9899 , 'images/Accessories img/pow-6.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pow-7.jpg" alt="Power Bank Case 4 X 18650 battery Kit holder DIY Box">
+            <h3>Power Bank Case 4 X 18650 battery Kit holder DIY Box</h3>
+            <p class="price">Rs1,090.00LKR*</p>
+            <p>Mobile Power sets of materials include: power motherboard + supply enclosure, Features:, 1. Brand new, high quality, 2. Fashion aluminum alloy</p>
+            <button onclick="buyNow('Power Bank Case 4 X 18650 battery Kit holder DIY Box', 1090 , 'images/Accessories img/pow-7.jpg')">Buy Now</button>       
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/pow-8.jpg" alt="Xiaomi 33W Power Bank 20000mAh">
+            <h3>Xiaomi 33W Power Bank </h3>
+            <p class="price">Rs10,000.00LKR*</p>
+            <p>Xiaomi 33W Power Bank 20000mAh (Integrated Cable) Tan + </p>
+            <button onclick="buyNow('Xiaomi 33W Power Bank', 10000 , 'images/Accessories img/pow-8.jpg')">Buy Now</button>       
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/pow-9.jpg" alt="15 Cool Power Banks ">
+            <h3>15 Cool Power Banks </h3>
+            <p class="price">Rs6,400.00LKR*</p>
+            <p>15 Cool Power Banks 25W 18000mAh;lightweight;with digital screen</p>
+            <button onclick="buyNow('15 Cool Power Banks', 6400 , 'images/Accessories img/pow-9.jpg')">Buy Now</button>       
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/pow-10.jpg" alt="Fast charge powerbank: 10,000 mAh, 2 USBs ">
+            <h3>Fast charge powerbank: 10,000 mAh, 2 USBs </h3>
+            <p class="price">Rs5,850.00LKR*</p>
+            <p>Fast charge power bank with a classic look ;10,000 mAh;2 USBs </p>
+            <button onclick="buyNow('Fast charge powerbank: 10,000 mAh, 2 USBs', 5850 , 'images/Accessories img/pow-10.jpg')">Buy Now</button>       
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+      <div class="footer-brand">
+        <h2>Tech Avenue</h2>
+        <p>Your one-stop shop for smartphones & accessories</p>
+      </div>
+
+      <div class="container">
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Mobile Phones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Support</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Warranty & Repairs</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:support@techavenue.com">support@techavenue.com</a>
+            </li>
+            <li><a href="tel:+94738756343">+94 738 756 343</a></li>
+            <li><a href="#">Find a Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <img
+                src="images/Accessories img/facebook-svgrepo-com (2).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Facebook</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/instagram-svgrepo-com (1).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Instagram</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/tiktok-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">TikTok</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/youtube-you-tube-video-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tech Avenue. All rights reserved.</p>
+      </div>
+    </footer>
+
+    </div>
+   <script src="js/buy now/items.js"></script>
+
+</body>
+</html>    
+        

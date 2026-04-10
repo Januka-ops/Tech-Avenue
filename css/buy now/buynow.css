@@ -1,0 +1,286 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #b7cfdf;
+    color: #f3f1f1ef;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(180deg, #070092, #000000);;
+    background-size: cover;           
+    background-repeat: no-repeat;     
+    background-position:center; 
+    background-attachment: scroll;
+    margin: 40px 0;
+}
+
+
+
+/* Container */
+
+.container {
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(9, 9, 9, 0.4);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    
+}
+/* Heading */
+.container h1 {
+    text-align: center;
+    color:rgb(0, 0, 0);
+    margin-bottom: 25px;
+    font-size: 4rem;
+    margin-right:10px ;
+}
+
+/* Phone Details Section */
+.phone-details {
+    display: flex;
+    gap: 20px;
+    margin-bottom:10px;
+    align-items: center;
+
+}
+
+.phone-details img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-top:cover;
+    border:none;
+    transition: transform 0.4s ease-in-out;
+    margin-top: -10PX;
+    
+}
+.phone-details:hover img{
+    transform: scale(1.05);
+    
+}
+
+.phone-details h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color:rgb(0, 0, 0);
+
+}
+
+.phone-details p {
+    font-size:20px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    color: #000;
+    
+}
+
+/* Form Styling */
+form h3 {
+    margin-bottom: 15px;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+  
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    border: 3px solid;
+    font-size:20px;
+}
+
+form input,
+form textarea
+ {
+    outline:none;
+    border-color:#000000;
+    box-shadow: 0 0 5px rgba(14, 13, 13, 0.3);
+    transition: 0.4s ease-in-out;
+}
+
+form input:hover{
+ background-color:rgb(228, 228, 228);
+ border-color:#006aff;
+}
+
+form textarea:hover{
+  background-color: rgb(228, 228, 228);
+  border-color:#006aff;
+  
+}
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Quantity Input */
+label {
+    font-weight: 600;
+    margin: bottom 50px;
+    display:block;
+    color: #000;
+}
+
+
+#quantity {
+    margin-top:10px;
+    width: 100px;
+    color: #000102;
+    background-color: white;
+    border-color:black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition:0.4s ease-in;
+}
+
+#quantity:hover{
+  background-color: rgb(228, 228, 228);
+  border-color:#006aff;
+}
+/*payment method select head*/
+#paymenthead{
+ font: size 10px;
+ padding: auto;
+ margin-bottom:10px;
+ color: #000;
+}
+/*pumrnt method select para*/
+#paymentpara{
+  margin-bottom: 10px;
+  color: #000;
+}
+/*payment method*/
+/* Hide radio */
+.payment-method input {
+  display: none;
+}
+
+/* Payment box */
+.payment-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #ccc;
+  border-radius:60px;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  background: #fff;
+  transition:0.5s ease-in-out ;
+  height: 60px;
+}
+
+/*  Payment mrthod hover */
+.payment-method:hover {
+  border-color:#006aff;
+  background: #eaf2ff;
+  transform:scale(1.01) ;
+}
+
+/* Text */
+.payment-method .text {
+  font-weight: 600;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color:black;
+}
+
+/* Selected state */
+.payment-method input:checked ~ .text,
+.payment-method input:checked ~ .picon,
+.payment-method input:checked ~ .check-icon {
+  color:black;
+}
+/* FULL COLOR WHEN SELECTED */
+.payment-method{
+  border: solid;
+  border-color:#000000
+}
+
+.payment-method:has(input:checked) {
+  background-color: #72a1df;
+  border-color: #007BFF;
+}
+
+.payment-method:has(input:checked) .check-icon {
+  display: inline;
+}
+
+
+/* Icon */
+.picon {
+  width: 50px;
+}
+
+
+/* Submit Button */
+button {
+    color: white;
+    background-color: #006aff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border:none;
+    border-radius:300 px;
+}
+
+button:hover {
+    animation-name: fade in;
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    background: #0000ff;
+    color: #f1f4f5;
+    border: none;
+    outline: none
+}
+#submit{
+ border:none;
+ border-radius:600px ;
+}
+    
+
+
+/* Responsive */
+@media (max-width: 500px) {
+    .phone-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .phone-details img {
+        width: 120px;
+    }
+}
+
+/*back to home */
+.back-to-home {
+  position: absolute;
+  top:10px;
+margin-left: -400px;
+
+}
+
+.back-to-home img {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  
+}
+
+

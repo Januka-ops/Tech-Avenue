@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Others</title>
+    <link rel="stylesheet" href="css/accessories/accessories.css">
+    <link rel="stylesheet" href="style1.css"> 
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/Accessories img/logo.png" alt="logo">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Mobile Phones ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="apple.html">Apple</a></li>
+            <li><a href="samsung.html">Samsung</a></li>
+            <li><a href="huawei.html">Huawei</a></li>
+            <li><a href="honor.html">Honor</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Laptops ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="mac.html">Mac</a></li>
+            <li><a href="asus.html">Asus</a></li>
+            <li><a href="acer.html">Acer</a></li>
+            <li><a href="hp.html">HP</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Accessories ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="web2.html">Phone Chargers</a></li>
+            <li><a href="web5.html">Powerbanks</a></li>
+            <li><a href="web3.html">Headphone & Airpods</a></li>
+            <li><a href="web4.html">Others</a></li>
+          </ul>
+        </li>
+
+        <li><a href="smartwatch.html">Smart Watch</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      const dropdowns = document.querySelectorAll(".dropdown");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      const navItems = navLinks.querySelectorAll("a");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Dropdown functionality for desktop
+      dropdowns.forEach((dropdown) => {
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+        const menu = dropdown.querySelector(".dropdown-menu");
+
+        // Desktop: hover
+        dropdown.addEventListener("mouseenter", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.add("active");
+            menu.style.display = "block";
+          }
+        });
+
+        dropdown.addEventListener("mouseleave", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.remove("active");
+            menu.style.display = "none";
+          }
+        });
+
+        // Mobile: click
+        toggle.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle("active");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+          dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove("active");
+            dropdown.querySelector(".dropdown-menu").style.display = "none";
+          });
+        }
+      });
+    </script>
+
+
+    <h1 class="title">Others</h1>
+
+    <div class="container">
+        <div class="product">
+            <img src="images/Accessories img/sd-1.png" alt="Sandisk Extreme Pro UHSN-1 64GB 200mb/s SD Card">
+            <h3>Sandisk Extreme Pro UHSN-1 64GB 200mb/s SD Card</h3>
+            <p class="price">Rs5,900.00LKR*</p>
+            <p>The SanDisk Extreme PRO SDHC™ and SDXC™ UHS-I 64GB Card delivers fast performance with high-speed transfer, ideal for 4K UHD video and burst ...</p>
+            <button onclick="buyNow('Sandisk Extreme Pro UHSN-1 64GB 200mb/s SD Card', 5900 , 'images/Accessories img/sd-1.png')">Buy Now</button>
+        </div>
+
+          <div class="product">
+            <img src="images/Accessories img/sd-2.jpg" alt="Sandisk Ultra 32Gb 100mbps Micro Memory Card">
+            <h3>Sandisk Ultra 32Gb 100mbps Micro Memory Card</h3>
+            <p class="price">Rs2,200.00LKR*</p>
+            <p>Special Features, SDXC Data Storage Capacity, Class 10 Speed, Max. Read Speed: 100 MB/s, Ultra High Speed Class 1</p>
+            <button onclick="buyNow('Sandisk Ultra 32Gb 100mbps Micro Memory Card', 2200 , 'images/Accessories img/sd-2.jpg')">Buy Now</button>
+        </div>
+
+          <div class="product">
+            <img src="images/Accessories img/sd-3.jpg" alt="SanDisk 256GB Extreme UHS-I SDXC Memory Card">
+            <h3>SanDisk 256GB Extreme UHS-I SDXC Memory Card</h3>
+            <p class="price">Rs18,900.00LKR*</p>
+            <p>Designed for SD devices that can capture Full HD, 3D, and 4K video, as well as raw and burst photography, the 256GB Extreme UHS-I SDXC Memory Card ...</p>
+            <button onclick="buyNow('SanDisk 256GB Extreme UHS-I SDXC Memory Card', 18900 , 'images/Accessories img/sd-3.jpg')">Buy Now</button>       
+        </div>
+
+          <div class="product">
+            <img src="images/Accessories img/sd-4.jpg" alt="16GB Micro SD Memory Card High Quality">
+            <h3>16GB Micro SD Memory Card High Quality</h3>
+            <p class="price">Rs565.00LKR*</p>
+            <p>16GB MEMORY CARD ( A QUALITY )</p>
+            <button onclick="buyNow('16GB Micro SD Memory Card High Quality', 565 , 'images/Accessories img/sd-4.jpg')">Buy Now</button>       
+        </div>
+
+          <div class="product">
+            <img src="images/Accessories img/sd-5.jpg" alt="V Gen Sd 1tb SanDisk Extreme PRO SDXC 1TB 280MB/s">
+            <h3>V Gen Sd 1tb SanDisk Extreme PRO SDXC 1TB 280MB/s UHS-II Memory Card JB</h3>
+            <p class="price">Rs7,990.00LKR*</p>
+            <p>Designed for SD devices that can capture Full HD, 3D, and 4K video, as well as raw and burst photography</p>
+            <button onclick="buyNow('V Gen Sd 1tb SanDisk Extreme PRO SDXC 1TB 280MB/s UHS-II Memory Card JB', 7990 , 'images/Accessories img/sd-5.jpg')">Buy Now</button>       
+        </div>
+
+          <div class="product">
+            <img src="images/Accessories img/sd-6.jpg" alt="SD MMC SDHC Holder Pouch Storage Case ">
+            <h3>SD MMC SDHC Holder Pouch Storage Case </h3>
+            <p class="price">Rs1,583.00LKR*</p>
+            <p>- Brand New and High Quality - Universal memory cards carrying bag. - Suitable for SD/mini SD/micro SD/XD/MMC/CF card. </p>
+            <button onclick="buyNow('SD MMC SDHC Holder Pouch Storage Case', 1583 , 'images/Accessories img/sd-6.jpg')">Buy Now</button>       
+        </div>
+
+          <div class="product">
+            <img src="images/Accessories img/pen-1.jpg" alt="SanDisk Ultra Flair 64GB USB 3.0 Pen Drive">
+            <h3>SanDisk Ultra Flair 64GB USB 3.0 Pen Drive</h3>
+            <p class="price">Rs2,350.00LKR*</p>
+            <p>Buy SanDisk Cruzer Blade Pen Drive Online from CyberDeals for the Best Price in Sri Lanka.</p>
+            <button onclick="buyNow('SanDisk Ultra Flair 64GB USB 3.0 Pen Drive', 2350 , 'images/Accessories img/pen-1.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pen-2.jpg" alt="KINGSTON EXODIA ONYX 16GB PEN DRIVE">
+            <h3>KINGSTON EXODIA ONYX 16GB PEN DRIVE</h3>
+            <p class="price">Rs1,800.00LKR*</p>
+            <p>Kingston Exodia Onyx 16GB – Reliable, Fast, and Stylish Storage, Storage: 16GB, Interface: USB 3.2 Gen 1</p>
+            <button onclick="buyNow('KINGSTON EXODIA ONYX 16GB PEN DRIVE', 1800 , 'images/Accessories img/pen-2.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pen-3.jpg" alt="Xiaomi 16TB USB 3.0 Pen Drive ">
+            <h3>Xiaomi 16TB USB 3.0 Pen Drive </h3>
+            <p class="price">Rs890.00LKR*</p>
+            <p>8TB 4TB High Speed Transfer Metal SSD Pendrive Cle Portable U Disk</p>
+            <button onclick="buyNow('Xiaomi 16TB USB 3.0 Pen Drive', 890 , 'images/Accessories img/pen-3.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pen-4.jpg" alt="SanDisk 32GB OTG Pen Drive">
+            <h3>SanDisk 32GB OTG Pen Drive</h3>
+            <p class="price">Rs3,200.00LKR*</p>
+            <p>Quickly and easily transfer your files between OTG-enabled Android™ smartphones and tablets and PC and Mac computers.</p>
+            <button onclick="buyNow('SanDisk 32GB OTG Pen Drive', 3200 , 'images/Accessories img/pen-4.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/pen-5.jpg" alt="Mobile Phone OTG Cable Type -C">
+            <h3>Mobile Phone OTG Cable Type -C</h3>
+            <p class="price">Rs480.00LKR*</p>
+            <p>Transfer Files Android Phone Mobile To Pendrive Connector Price OTG Connector To Connect USB </p>
+            <button onclick="buyNow('Mobile Phone OTG Cable Type -C', 480 , 'images/Accessories img/pen-5.jpg')">Buy Now</button>       
+        </div>
+
+        
+
+        <div class="product">
+            <img src="images/Accessories img/hol-1.jpg" alt="Easy One Touch Car Phone Holder">
+            <h3>Easy One Touch Car Phone Holder</h3>
+            <p class="price">Rs1,450.00LKR*</p>
+            <p></p>
+            <button onclick="buyNow('Easy One Touch Car Phone Holder', 1450 , 'images/Accessories img/hol-1.jpg')">Buy Now</button>       
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/hol-2.jpg" alt="Wiwu CH041 Magnetic Car Phone Mount">
+            <h3>Wiwu CH041 Magnetic Car Phone Mount</h3>
+            <p class="price">Rs1,300.00LKR*</p>
+            <p>Keep your phone secure and visible on the road while driving with the Wiwu CH041 Magnetic Car Phone Mount. </p>
+            <button onclick="buyNow('Wiwu CH041 Magnetic Car Phone Mount', 1300 , 'images/Accessories img/hol-2.jpg')">Buy Now</button>       
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/hub-1.jpg" alt="UGREEN 35625 8 in 1 USB C Docking Station with Dual Monitor 4K Triple Display USBC Hub">
+            <h3>4K Triple Display USBC Hub </h3>
+            <p class="price">Rs13,490.00LKR*</p>
+            <p> 1 USB C Docking Station with Dual Monitor 4K Triple Display USBC Hub </p>
+            <button onclick="buyNow('4K Triple Display USBC Hub', 13490 , 'images/Accessories img/hub-1.jpg')">Buy Now</button>       
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/hub-2.jpg" alt="USB C Hub 4 Port 3.0 Type C USB Multi-Port Hub">
+            <h3>USB C Hub 4 Port 3.0 Type C USB Multi-Port Hub</h3>
+            <p class="price">Rs1,450.00LKR*</p>
+            <p>Plug and play, easy to install, A reasonable USB interface layout can support four USB high-speed devices, Compatible with USB 2.0 and 1.1, Stable ...</p>
+            <button onclick="buyNow('USB C Hub 4 Port 3.0 Type C USB Multi-Port Hub', 1450 , 'images/Accessories img/hub-2.jpg')">Buy Now</button>       
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="footer-brand">
+        <h2>Tech Avenue</h2>
+        <p>Your one-stop shop for smartphones & accessories</p>
+      </div>
+
+      <div class="container">
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Mobile Phones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Support</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Warranty & Repairs</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:support@techavenue.com">support@techavenue.com</a>
+            </li>
+            <li><a href="tel:+94738756343">+94 738 756 343</a></li>
+            <li><a href="#">Find a Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <img
+                src="images/Accessories img/facebook-svgrepo-com (2).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Facebook</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/instagram-svgrepo-com (1).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Instagram</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/tiktok-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">TikTok</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/youtube-you-tube-video-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tech Avenue. All rights reserved.</p>
+      </div>
+    </footer>
+
+    </div>
+   <script src="js/buy now/items.js"></script>
+ 
+
+</body>
+</html>

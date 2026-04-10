@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Avenue</title>
+
+    <link rel="stylesheet" href="css/home/home.css" />
+    <script src="js/home/home.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/home img/logo.png" alt="logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+
+        <li class="dropdown"> 
+          <a href="#" class="dropdown-toggle">Mobile Phones ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="apple.html">Apple</a></li> 
+            <li><a href="samsung.html">Samsung</a></li>
+            <li><a href="huawei.html">Huawei</a></li>
+            <li><a href="honor.html">Honor</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Laptops ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="mac.html">Mac</a></li>
+            <li><a href="asus.html">Asus</a></li>
+            <li><a href="acer.html">Acer</a></li>
+            <li><a href="hp.html">HP</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Accessories ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="web2.html">Phone Chargers</a></li>
+            <li><a href="web5.html">Powerbanks</a></li>
+            <li><a href="web3.html">Headphone & Airpods</a></li>
+            <li><a href="web4.html">Others</a></li>
+          </ul>
+        </li>
+
+        <li><a href="smartwatch.html">Smart Watch</a></li>
+        <li><a href="About.html">About</a></li>
+
+        <li><a href="login.html" id="login">Login</a></li>
+        
+      </ul>
+
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMenu()">
+        <span class="hamburger-icon">☰</span>
+      </button>
+    </nav>
+
+    <section class="hero">
+      <div class="slider-container">
+        <div class="slider-wrapper">
+
+          <div class="slider-slide">
+            <img src="images/home img/banner-2.png" alt="Banner Image 2" class="banner-2"/>
+            <div class="slide-content">
+              <h1>Noise Pulse 2</h1>
+              <h2>Experience Ultimate Performance</h2>
+              <button class="button btn-banner btn-banner-1">Explore</button>
+            </div>
+          </div>
+
+          <div class="slider-slide">
+            <img src="images/home img/banner-1.png" alt="Banner Image 1" class="banner-1"/>
+            <div class="slide-content">
+              <h1>iPhone</h1>
+              <h2>Meet The New iPhone Series</h2>
+              <button class="button btn-banner btn-banner-2">Explore</button>
+            </div>
+          </div>
+
+          <div class="slider-slide">
+            <img src="images/home img/banner-3.png" alt="Banner Image 3" class="banner-3"/>
+            <div class="slide-content">
+              <h1>Galaxy S25</h1>
+              <h2>Samsung's Latest Innovation</h2>
+              <button class="button btn-banner btn-banner-3">Explore</button>
+            </div>
+          </div>
+          
+        </div>
+        <button class="slider-btn slider-prev">&#10094;</button>
+        <button class="slider-btn slider-next">&#10095;</button>
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <div>
+      <h1 class="header reveal">What's New</h1>
+      <div class="products-grid">
+        <div class="product-card reveal">
+          <h2>ASUS Zenbook Pro</h2>
+          <button class="button btn-card btn-card-1">Learn More</button>
+          <img
+            src="images/home img/asus zb.png"
+            alt="Product 1"
+            class="p-1"
+          />
+        </div>
+
+        <div class="product-card reveal">
+          <h2>Apple iphone 17 Pro</h2>
+          <button class="button btn-card btn-card-2">Learn More</button>
+          <img src="images/home img/p-4.png" alt="Product 2" class="p-2" />
+        </div>
+
+        <div class="product-card reveal">
+          <h2>HUAWEI FIT 4 Pro</h2>
+          <button class="button btn-card btn-card-3">Learn More</button>
+          <img src="images/home img/p-3.png" alt="Product 3" class="p-3" />
+        </div>
+
+        <div class="product-card reveal">
+          <h2>Samsung Galaxy S25</h2>
+          <button class="button btn-card btn-card-4">Learn More</button>
+          <img src="images/home img/s25.png" alt="Product 4" class="p-4" />
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-offer reveal">
+        <h1>Up To</h1>
+        <h2>50% Off</h2>
+        <h3>Price Starting</h3>
+        <h4>Rs.80,000</h4>
+        <button class="button btn-offer">Explore</button>
+        <img src="images/home img/offer-2.png" alt="Offer Banner" />
+      </div>
+    </section>
+
+    <div>
+      <div class="smart-grid">
+        <div class="smart-card reveal">
+          <h1>Premium Audio</h1>
+          <p>
+            Experience crystal clear sounds with our <br />
+            premium audio products.
+          </p>
+          <button class="button btn-smart btn-smart-1">Explore Accessories</button>
+          <img src="images/home img/smart-1.webp" alt="earbuds" />
+        </div>
+
+        <div class="smart-card reveal">
+          <h1>Power Banks</h1>
+          <p>
+            Stay powered on the go with our reliable <br />
+            power banks.
+          </p>
+          <button class="button btn-smart btn-smart-2">Explore Accessories</button>
+          <img src="images/home img/smart-2.webp" alt="powerbank" />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="svg-icons reveal">
+        <div class="svg-setup">
+          <img
+            src="images/home img/delivery-svgrepo-com.svg"
+            alt="delivery"
+          />
+          <h2>Free Delivery</h2>
+        </div>
+
+        <div class="svg-setup">
+          <img
+            src="images/home img/shield-check-svgrepo-com.svg"
+            alt="delivery"
+          />
+          <h2>Warrenty</h2>
+        </div>
+
+        <div class="svg-setup">
+          <img
+            src="images/home img/headphone-svgrepo-com.svg"
+            alt="delivery"
+          />
+          <h2>24/7 Support</h2>
+        </div>
+
+        <div class="svg-setup">
+          <img
+            src="images/home img/payment-card-svgrepo-com.svg"
+            alt="delivery"
+          />
+          <h2>Secure Payments</h2>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="footer-brand">
+        <h2>Tech Avenue</h2>
+        <p>Your one-stop shop for smartphones & accessories</p>
+      </div>
+
+      <div class="container">
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Mobile Phones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Support</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Warranty & Repairs</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:support@techavenue.com">support@techavenue.com</a>
+            </li>
+            <li><a href="tel:+94738756343">+94 738 756 343</a></li>
+            <li><a href="#">Find a Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <img
+                src="images/home img/facebook-svgrepo-com (2).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Facebook</a>
+            </li>
+            <li>
+              <img
+                src="images/home img/instagram-svgrepo-com (1).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Instagram</a>
+            </li>
+            <li>
+              <img
+                src="images/home img/tiktok-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">TikTok</a>
+            </li>
+            <li>
+              <img
+                src="images/home img/youtube-you-tube-video-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tech Avenue. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

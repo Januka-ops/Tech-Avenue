@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login/login.css">
+    <title>Login | TechAvenue</title>
+</head>
+<body>
+
+    <div class="logo-box">
+        <div class="logo">
+            <a href="home.html"><img src="images/home img/logo.png" alt="logo"></a>
+        </div>
+    </div>
+    
+<div class="container">
+    <div class="form-section">
+        <h3 class="login-ac">Login to Account</h3>
+
+        <form method="post" onsubmit="return validateLogin()" id="form">
+
+            <label for="contact">Contact Number</label>
+            <input type="text" name="tp" id="tp" required placeholder="Logged phone number">
+            <div id="tpError" class="error"></div>
+            <br><br>
+
+            <label for="pass">Password</label><br>
+            <input type="password" name="pass" id="pass" required placeholder="Password">
+            <div id="passError" class="error"></div>
+            <br><br>
+
+            <button type="submit" class="login">Login</button>
+        </form>
+
+        <script src="js/login/login.js"></script>
+
+        <h4 class="login-ac-sub signup">
+            Don't have an account? <a href="signup.html">Signup</a>
+        </h4>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones & AirPods</title>
+    <link rel="stylesheet" href="css/accessories/accessories.css">
+    <link rel="stylesheet" href="style1.css"> 
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/Accessories img/logo.png" alt="logo">
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Mobile Phones ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="apple.html">Apple</a></li>
+            <li><a href="samsung.html">Samsung</a></li>
+            <li><a href="huawei.html">Huawei</a></li>
+            <li><a href="honor.html">Honor</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Laptops ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="mac.html">Mac</a></li>
+            <li><a href="asus.html">Asus</a></li>
+            <li><a href="acer.html">Acer</a></li>
+            <li><a href="hp.html">HP</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Accessories ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="web2.html">Phone Chargers</a></li>
+            <li><a href="web5.html">Powerbanks</a></li>
+            <li><a href="web3.html">Headphone & Airpods</a></li>
+            <li><a href="web4.html">Others</a></li>
+          </ul>
+        </li>
+
+        <li><a href="smartwatch.html">Smart Watch</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+      const dropdowns = document.querySelectorAll(".dropdown");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when a link is clicked
+      const navItems = navLinks.querySelectorAll("a");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Dropdown functionality for desktop
+      dropdowns.forEach((dropdown) => {
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+        const menu = dropdown.querySelector(".dropdown-menu");
+
+        // Desktop: hover
+        dropdown.addEventListener("mouseenter", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.add("active");
+            menu.style.display = "block";
+          }
+        });
+
+        dropdown.addEventListener("mouseleave", () => {
+          if (window.innerWidth > 768) {
+            dropdown.classList.remove("active");
+            menu.style.display = "none";
+          }
+        });
+
+        // Mobile: click
+        toggle.addEventListener("click", (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle("active");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+          }
+        });
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+          dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove("active");
+            dropdown.querySelector(".dropdown-menu").style.display = "none";
+          });
+        }
+      });
+    </script>
+
+    <h1 class="title">Headphones & AirPods</h1>
+
+
+    <div class="container">
+        <div class="product">
+            <img src="images/Accessories img/head-1.jpg" alt="Sony WH-1000XM6 Noise Cancelling Wireless Headphones">
+            <h3>Sony WH-1000XM6 <br> Noise Cancelling Wireless Headphones</h3>
+            <p class="price">Rs115,314.00LKR*</p>
+            <p>7x faster. Flawless control, 12 microphones. Precise detection, Real-time analysis. Adaptive quiet, 12 Months Warranty</p>
+            <button onclick="buyNow('Sony WH-1000XM6', 1153014 , 'images/Accessories img/head-1.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/head-2.jpg" alt="Bose QuietComfort Ultra Noise Cancelling Headphones">
+            <h3>Bose QuietComfort Ultra <br>Noise Cancelling Headphones</h3>
+            <p class="price">Rs114,274.00LKR*</p>
+            <p>Crystal Clear Calls, Elevated Design, 24 Hour Battery Life, 6 Months Warranty</p>
+            <button onclick="buyNow('Bose QuietComfort Ultra', 114274 , 'images/Accessories img/head-2.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/head-3.jpg" alt="Apple AirPods Max Wireless Over Ear Headphones">
+            <h3>Apple AirPods Max Wireless Over Ear Headphones</h3>
+            <p class="price">Rs5,750.00LKR*</p>
+            <p>BREATHTAKING AUDIO QUALITY — Apple-designed dynamic driver provides high-fidelity audio.</p>
+            <button onclick="buyNow('Sony WH-1000XM6Bose QuietComfort Ultra', 114274 , 'images/Accessories img/head-3.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/head-4.jpg" alt="MOMENTUM 4 Wireless">
+            <h3>MOMENTUM 4 Wireless</h3>
+            <p class="price">107,500.00LKR*</p>
+            <p>Shop Sennheiser Momentum 4 Wireless Special Edition Headphones with Bluetooth with Adaptive Noise Cancelling for Crystal Clear Calls 60 Hours of ...</p>
+            <button onclick="buyNow('MOMENTUM 4 Wireless', 107500 , 'images/Accessories img/head-4.jpg')">Buy Now</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/head-5.jpg" alt="Focal Bathys Hifi Wireless Noise-Canceling Headphones">
+            <h3>Focal Bathys Hifi Wireless Noise-Canceling Headphones</h3>
+            <p class="price">Rs15,750.00LKR*</p>
+            <p>Special Edition Headphones with Bluetooth with Adaptive Noise Cancelling for Crystal Clear Calls 60 Hours of ..</p>
+            <button onclick="buyNow('Focal Bathys Hifi Wireless Noise-Canceling Headphones', 15750 , 'images/Accessories img/head-5.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/head-6.jpg" alt="Sonos Ace: Wireless Over-Ear Headphones with Noise Cancellation">
+            <h3>Sonos Ace: Wireless Over-Ear Headphones with Noise Cancellation</h3>
+            <p class="price">Rs128,000.00LKR*</p>
+            <p>Custom-designed driver tuned by industry-leading producers, engineers, and artists provides a high-fidelity sound experience Spatial audio surrounds ..</p>
+            <button onclick="buyNow('Sonos Ace: Wireless Over-Ear Headphones with Noise Cancellation', 128000 , 'images/Accessories img/head-6.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/head-7.jpg" alt="Beats Studio Pro – Premium Wireless Noise Cancelling Headphones">
+            <h3>Beats Studio Pro – Premium Wireless <br> Noise Cancelling Headphones</h3>
+            <p class="price">Rs110,240.00LKR*</p>
+            <p>Beats' new fourth-gen Studio headphones look similar to their predecessor on the outside but have some big changes on the inside that make them significantly better headphones </p>
+            <button onclick="buyNow('Beats Studio Pro – Premium Wirelessgreen', 110240 , 'images/Accessories img/head-8.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/head-8.jpg" alt="JBL Tune 520BT Wireless On-Ear Headphones">
+            <h3>JBL Tune 520BT Wireless On-Ear Headphones</h3>
+            <p class="price">Rs19,550.00LKR*</p>
+            <p>JBL Pure Bass Sound, Wireless Bluetooth 5.3 technology, Customize your listening experience, 6 Months Warranty</p>
+            <button onclick="buyNow('JBL Tune 520BT Wireless On-Ear Headphones', 19550 , 'images/Accessories img/head-9.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/air-1.jpg" alt="Apple AirPods Pro 3 ">
+            <h3>Apple AirPods Pro 3 </h3>
+            <p class="price">Rs78,269.00LKR*</p>
+            <p>Orientation Type: In Ear, Connectivity: Bluetooth, Version 5.3, Battery Life: 24 Hours, Fast Charging: Yes, Noise Cancellation: Active Noise ...</p>
+            <button onclick="buyNow('Apple AirPods Pro 3', 78269 , 'images/Accessories img/air-1.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/air-2.jpg" alt="Apple AirPods Pro 2">
+            <h3>Apple AirPods Pro 2</h3>
+            <p class="price">59,900.00LKR*</p>
+            <p>AirPods Pro 2 feature an H2 chip inside for delivering a better audio experience, XS ear tips join S, M, and L, 6 hour battery life, 33% increase ...</p>
+            <button onclick="buyNow('Apple AirPods Pro 2', 59900, 'images/Accessories img/air-2.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Accessories img/air-3.jpg" alt="Apple AirPods 4 With ANC | Fono Technologies">
+            <h3>Apple AirPods 4 With ANC | Fono Technologies</h3>
+            <p class="price">Rs25,550.00LKR*</p>
+            <p>The new Apple AirPods 4 with Active Noise Cancellation or the AirPods Pro 2? We’ll take you through the advantages of each one, how we think their noise cancellation and sound ...</p>
+            <button onclick="buyNow('Apple AirPods 4 With ANC | Fono Technologies', 25550, 'images/Accessories img/air-3.jpg')">Buy Now</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/air-4.jpg" alt="Beats Studio Buds +">
+            <h3>Beats Studio Buds +</h3>
+            <p class="price">Rs41,189.00LKR*</p>
+            <p>Up to 1.6x More Active Noise Cancelling, Up to 36 Hours of Listening Time with Charging Case, 3x Larger Mics for  Crisp, Clear Calls, Compatible ...</p>
+            <button onclick="buyNow('Beats Studio Buds', 41189, 'images/Accessories img/air-4.jpg')">Buy Now</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Accessories img/air-5.jpg" alt="Beats Solo Buds">
+            <h3>Beats Solo Buds</h3>
+            <p class="price">Rs29,550.00LKR*</p>
+            <p>Fully Custom Acoustic Architecture., Ergonomic Design for a Natural Fit, Up to 18 Hours of Battery Life, Compatible with iOS and Android, 6 Months ...</p>
+            <button onclick="buyNow('Beats Solo Buds', 29550, 'images/Accessories img/air-5.jpg')">Buy Now</button>
+        </div>
+
+   <footer class="footer" id="footer">
+      <div class="footer-brand">
+        <h2>Tech Avenue</h2>
+        <p>Your one-stop shop for smartphones & accessories</p>
+      </div>
+
+      <div class="container">
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Mobile Phones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Support</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Warranty & Repairs</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:support@techavenue.com">support@techavenue.com</a>
+            </li>
+            <li><a href="tel:+94738756343">+94 738 756 343</a></li>
+            <li><a href="#">Find a Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <img
+                src="images/Accessories img/facebook-svgrepo-com (2).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Facebook</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/instagram-svgrepo-com (1).svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">Instagram</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/tiktok-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">TikTok</a>
+            </li>
+            <li>
+              <img
+                src="images/Accessories img/youtube-you-tube-video-svgrepo-com.svg"
+                alt="svg-1"
+                class="svg-1"
+              /><a href="#">YouTube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tech Avenue. All rights reserved.</p>
+      </div>
+    </footer>
+<script src="js/buy now/items.js"></script>
+</body>
+</html>

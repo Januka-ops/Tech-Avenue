@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login/signup.css">
+    <title>Sign up | TechAvenue</title>
+</head>
+<body>
+
+    <div class="logo-box">
+        <div class="logo">
+            <a href="home.html"><img src="images/home img/logo.png" alt="logo"></a>
+        </div>
+    </div>
+<div class="container">
+    <div class="form-section">
+        <h3 class="create-ac">Create Account</h3>
+        <h4 class="create-ac-sub">Fill in the details below to create your account</h4>
+
+        <form method="post" onsubmit="return saveSignupDetails()" id="form">
+
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" required placeholder="Enter Name">
+            <br><br>
+
+            <label for="contact">Contact Number</label><br>
+            <input type="text" name="tp" id="tp" required placeholder="Enter phone number">
+            <div id="tpError" class="error"></div>
+            
+
+            <label for="address">Address</label><br>
+            <input type="text" name="address" id="address" required placeholder="Enter address">
+            <br><br>
+
+            <label for="pass">Password</label><br>
+            <input type="password" name="pass" id="pass" required placeholder="Enter a password">
+            <div id="passError" class="error"></div>
+            
+
+            <label for="c-pass">Confirm Password</label><br>
+            <input type="password" name="c-pass" id="c-pass" required placeholder="Re-enter password">
+            <div id="ConfirmError" class="error"></div>
+            <br><br>
+
+            <button type="submit" class="signup">Signup</button>
+        </form>
+
+        <h4 class="create-ac-sub login">
+            Already have an account? <a href="login.html">Login</a>
+        </h4>
+    </div>
+</div>
+    <script src="js/login/signup.js"></script>
+</body>
+</html>

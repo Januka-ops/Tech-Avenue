@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+   background: linear-gradient(135deg, #b1bdc7, #c6d3d4);
+  color: #333;
+}
+
+/* main layout */
+.product-page {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+
+.product-image {
+  width: 45%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fafafa;
+}
+
+
+.product-image img {
+   width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+ 
+
+/* right info area */
+.product-info {
+  width: 55%;
+}
+
+/* title */
+.product-info h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* price */
+.price {
+  font-size: 40px;
+  color: #7a2ca6;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+/* meta text */
+.meta p {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.meta span {
+  color: #999;
+  font-weight: 600;
+}
+
+.installment {
+  color: #7a2ca6 !important;
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+/* showroom row */
+.showroom-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0 40px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* small blue button */
+.showroom-btn {
+  background: #5bb7ff;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.showroom-btn:hover {
+  background: #3aa5ff;
+}
+
+/* action buttons */
+.action-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* whatsapp button */
+.whatsapp-btn {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #3e9e44;
+  transform: translateY(-2px);
+}
+
+
+
+.contact-btn:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .product-page {
+    gap: 80px;
+    padding: 50px 40px;
+  }
+
+  .product-image {
+    width: 45%;
+  }
+
+  .product-info {
+    width: 55%;
+  }
+
+  .product-info h1 {
+    font-size: 40px;
+  }
+
+  .price {
+    font-size: 32px;
+  }
+}
+
+/* Tablet (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .product-page {
+    gap: 40px;
+    padding: 35px 25px;
+  }
+
+  .product-image {
+    width: 50%;
+    min-height: 350px;
+  }
+
+  .product-image img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product-info {
+    width: 50%;
+  }
+
+  .product-info h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .meta p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .showroom-row {
+    gap: 12px;
+    margin: 20px 0 30px;
+    font-size: 15px;
+  }
+
+  .action-buttons {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .whatsapp-btn {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+}
+
+/* Small Tablet / Large Mobile (481px - 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .product-page {
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px 20px;
+  }
+
+  .product-image {
+    width: 100%;
+    min-height: 320px;
+  }
+
+  .product-image img {
+    width: 250px;
+    height: auto;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .price {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .meta p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .meta span {
+    font-size: 14px;
+  }
+
+  .showroom-row {
+    gap: 10px;
+    margin: 16px 0 24px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .showroom-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .action-buttons {
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .whatsapp-btn,
+  .contact-btn {
+    width: 100%;
+    padding: 14px 30px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .product-page {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+  }
+
+  .product-image {
+    width: 100%;
+    min-height: 280px;
+    border-radius: 12px;
+  }
+
+  .product-image img {
+    width: 200px;
+    height: auto;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info h1 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .price {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .meta p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .meta span {
+    font-size: 12px;
+  }
+
+  .installment {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .showroom-row {
+    gap: 8px;
+    margin: 14px 0 20px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .showroom-btn {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .whatsapp-btn,
+  .contact-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,303 @@
+/* ==================================================
+   responsive-overrides.css
+   Place this file after your existing `style.css` (link it after or paste contents at the end).
+   Contains ONLY overrides inside @media (max-width) queries per your instruction.
+   Includes explicit fixes for the product grid at 1024/768/425/375/320 breakpoints.
+   ==================================================
+
+/* -----------------------
+   1) Laptop / small-desktop
+   @max-width: 1024px
+   - Reduce columns to 2 where appropriate
+   - Tidy spacing and ensure product grid fits
+   ----------------------- */
+@media (max-width: 1024px) {
+  /* Typography density tweak (override only) */
+  html, body { font-size: 15.5px; }
+
+  /* Containers: reduce side padding to avoid side gaps */
+  .container, .site-container, .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    max-width: 980px;
+  }
+
+  /* Product grid -> 2 columns, centered, no side overflow */
+  .product-grid, .products, .products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: calc(100% - 1rem) !important; /* reduce risk of overflow */
+    box-sizing: border-box !important;
+  }
+
+  /* Product items should not force minimum widths */
+  .product-item, .product-card, .product-tile {
+    min-width: 0 !important; /* prevents overflow from flex children */
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  /* Make product images scale and center inside cards */
+  .product-item img, .product-card img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover;
+  }
+
+  /* Navbar adjustments: allow wrap, avoid overflow */
+  .navbar, .site-header, header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Keep nav links on a single line, allow horizontal scroll inside nav only */
+  .navbar .nav-links, nav ul, .menu {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 0.6rem !important;
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Prevent horizontal scroll on this breakpoint */
+  html, body { overflow-x: hidden; }
+}
+
+/* -----------------------
+   2) Tablet
+   @max-width: 768px
+   - Convert many multi-column layouts to 1-2 columns
+   - Fix product-grid alignment and remove unwanted side margins
+   ----------------------- */
+@media (max-width: 768px) {
+  html, body { font-size: 15px; overflow-x: hidden; }
+
+  .container, .site-container, .wrapper {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    max-width: 720px;
+    box-sizing: border-box;
+  }
+
+  /* Prefer 2 columns on tablets where space allows */
+  .product-grid, .products, .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.9rem !important;
+    width: calc(100% - 1.8rem) !important;
+    padding: 0 !important; /* remove external padding that causes visual side gaps */
+    margin: 0 auto !important;
+    justify-items: stretch;
+  }
+
+  /* If grid items are complex, allow stack-on-tablet to become single column */
+  .stack-on-tablet {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Remove default negative margins from common row helpers (if used) */
+  .row, .grid-row, .product-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Ensure individual product cards fill the grid column and are centered */
+  .product-item, .product-card, .product-tile {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Images: ensure they don't overflow their card */
+  .product-item img, .product-card img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* Nav: keep links on one line, allow nav inner scrolling if necessary */
+  .navbar .nav-links, nav ul, .menu {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* -----------------------
+   3) Large Mobile
+   @max-width: 425px
+   - Force single column flows
+   - Eliminate unwanted side margins and overflow in product grid
+   ----------------------- */
+@media (max-width: 425px) {
+  html, body { font-size: 14.5px; overflow-x: hidden; }
+
+  .container, .site-container, .wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 420px;
+    box-sizing: border-box;
+  }
+
+  /* Product grid -> single column for large mobile */
+  .product-grid, .products, .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-items: center;
+  }
+
+  /* Each product card should be full-width with no external margin */
+  .product-item, .product-card, .product-tile {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 0.6rem 0 !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  /* Ensure internal content doesn't create horizontal overflow */
+  .product-item .title, .product-item .price, .product-card .title {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Images scale and crop safely */
+  .product-item img, .product-card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* Buttons in product cards become full-width for easier tapping */
+  .product-item .btn, .product-card .btn, .product-card .button {
+    width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* -----------------------
+   4) Small Mobile
+   @max-width: 375px
+   - Final tightening: compact paddings, single-column, prevent overflow
+   ----------------------- */
+@media (max-width: 375px) {
+  html, body { font-size: 14px; overflow-x: hidden; }
+
+  .container, .site-container, .wrapper {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    max-width: 360px;
+    box-sizing: border-box;
+  }
+
+  .product-grid, .products, .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.55rem !important;
+    padding: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    justify-items: center;
+  }
+
+  .product-item, .product-card, .product-tile {
+    width: 100% !important;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+    margin: 0 0 0.5rem 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Smaller icons but still tappable */
+  img.icon, .icon img { height: 26px !important; width: auto !important; }
+}
+
+/* -----------------------
+   5) Extra Small Mobile / Narrow phones
+   @max-width: 320px
+   - Defensive fixes for very narrow viewports (320px and below)
+   - Ensure no overflow, center products and content
+   ----------------------- */
+@media (max-width: 320px) {
+  html, body { font-size: 13.5px; overflow-x: hidden; }
+
+  .container, .site-container, .wrapper {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+
+  .product-grid, .products, .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.45rem !important;
+    padding: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    justify-items: center;
+  }
+
+  .product-item, .product-card, .product-tile {
+    width: 100% !important;
+    margin: 0 0 0.4rem 0 !important;
+    padding-left: 0.15rem !important;
+    padding-right: 0.15rem !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .product-item img, .product-card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  /* Reduce large spacing utilities that might cause overflow */
+  .mt-large, .mb-large, .ml-large, .mr-large {
+    margin: 0.25rem !important;
+  }
+}
+
+/* -----------------------
+   Utility defensive rules (applied inside these media queries only)
+   - Ensure long words/wide content wrap and do not overflow viewport
+   - These are applied globally only within smaller breakpoints to avoid changing desktop layout
+   ----------------------- */
+@media (max-width: 768px) {
+  p, li, .text, .content, pre, code { word-wrap: break-word !important; overflow-wrap: anywhere !important; }
+  table, .table, .wide-element { width: 100% !important; max-width: 100% !important; display: block !important; }
+  .carousel img, .slider img { max-width: 100% !important; height: auto !important; display: block !important; }
+}
+
+/* ==========================
+   End of overrides. Notes:
+   - This file uses only overrides inside @media (max-width) queries per your request.
+   - If your product grid uses different classnames, add the matching selectors (e.g., .shop-grid, .catalog-grid).
+   - Keep this file loaded AFTER `style.css` so these rules win without !important in most cases.
+   ========================== */

@@ -1,0 +1,665 @@
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.page-title{
+    text-align: center;
+    padding: 30px;
+    background: white;
+    margin: 30px 0;
+    font-size: 15px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.product-card{
+    padding: 15px;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    background: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h3 {
+  font-size: 20px;
+}
+
+.product-card p {
+  font-size: 15px;
+}
+
+.product-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.price{
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+button {
+    background: #006aff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+button:hover {
+  background: #0051cc;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: #0d1b2a;
+  padding: 0 3rem;
+  z-index: 999;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 30%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  margin-left: auto;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.8rem 1.2rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  padding: 0.5rem 1rem;
+  background: #006aff;
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown menu */
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background: #0d1b2a;
+  padding: 0 3rem;
+  z-index: 999;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 30%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  margin-left: auto;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 0.8rem 1.2rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  padding: 0.5rem 1rem;
+  background: #006aff;
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: #fff;
+  list-style: none;
+  min-width: 160px;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+  display: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.dropdown-menu li a {
+  color: #000;
+  padding: 1rem 1.5rem;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  overflow: hidden;
+  background: #f1f1f1;
+  color: #006aff;
+}
+
+.dropdown-toggle:hover {
+  transition: all 0.3s ease;
+}
+
+
+/* Active dropdown (JS controlled) */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/*Hamburger for mobile views*/
+.hamburger {
+  color: #fff;
+  font-size: 3rem;
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0.4rem 0.6rem;
+}
+
+/*Footer*/
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #8d8c8a;
+}
+
+.footer-brand {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.footer-brand h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  font-size: 1.5rem;
+  color: #cfd8dc;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffb400;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #22303c;
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  color: #cfd8dc;
+}
+
+.svg-1 {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 8px;
+  margin-left: 130px;
+}
+
+
+/* Global safety & sensible defaults to avoid horizontal scrolling */
+html, body {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll at all sizes */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Ensure images and media are fluid by default */
+img, picture, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make buttons and interactive elements easier to tap on small screens */
+button, .btn, .button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.6rem 1rem;
+  line-height: 1.2;
+  touch-action: manipulation;
+}
+
+/* Containers: respect gaps/padding but shrink on smaller screens */
+.container, .site-container, .wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid/flex defaults to be overridden in media queries below */
+.grid, .cards-grid, .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* default desktop fallback */
+  gap: 1.25rem;
+}
+
+/* Cards baseline */
+.card, .panel {
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* Footer baseline */
+.footer, footer, .site-footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem 1.25rem;
+}
+
+/* ===========================
+   Laptop & small-desktop
+   max-width: 1024px
+   Goal: reduce multi-column layouts to 2 columns, adjust spacing
+   =========================== */
+@media (max-width: 1024px) {
+
+  /* Slightly smaller global typography for better density */
+  html, body {
+    font-size: 15.5px; /* override if root font-size was 16px */
+  }
+
+  /* Containers: reduce max width if you use fixed values elsewhere */
+
+.products {
+  margin: 0 50px;
+}
+  .container, .site-container, .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 980px;
+  }
+
+  /* Grid -> 2 columns on laptop */
+  .grid, .cards-grid, .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Navbar: keep horizontal but increase wrapping and spacing */
+  .navbar, header, .site-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .nav-links, .nav, nav ul, .menu {
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  /* Hero / banner adjustments */
+  .hero, .banner {
+    padding: 3.5rem 1rem;
+  }
+
+  .hero h1, .hero .title {
+    font-size: 2.2rem;
+  }
+
+  /* Cards: slightly tighter padding */
+  .card, .panel {
+    padding: 0.9rem;
+  }
+
+  /* Footer: two-column footer if previously multi-column */
+  .footer .footer-grid, .site-footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* ===========================
+   Tablet
+   max-width: 768px
+   Goal: stack nav when necessary, convert most grids to 1-2 columns,
+         increase tap targets, reduce hero size
+   =========================== */
+@media (max-width: 768px) {
+
+  /* Slightly smaller base font for tablets */
+  html, body {
+    font-size: 15px;
+  }
+
+  .products {
+    margin: 0 65px;
+  }
+
+  .container, .site-container, .wrapper {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    max-width: 720px;
+  }
+
+  /* Convert grids to 1 or 2 columns depending on complexity */
+  .grid, .cards-grid, .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+
+  /* If a grid is dense (e.g., .grid--dense), force 1 column */
+  .grid--dense, .stack-on-tablet {
+    grid-template-columns: 1fr;
+  }
+
+  /* Navbar: stack links and show a clear menu flow */
+  .navbar .nav-links, .nav, nav ul, .menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  /* If you have a hamburger button, ensure it displays and is touch-friendly */
+  .nav-toggle, .menu-toggle, .hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Hero adjustments on tablet */
+  .hero, .banner {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .hero h1, .hero .title {
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  /* Card text and actions */
+  .card h3, .card .title {
+    font-size: 1.05rem;
+  }
+
+  .card p, .card .excerpt {
+    font-size: 0.95rem;
+  }
+
+  /* Buttons: full width on stacked cards/sections for easier tapping */
+  .card .btn, .panel .btn, .cta .btn {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* Footer: stack columns into single column */
+  .footer .footer-grid, .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   Large Mobile
+   max-width: 425px
+   Goal: single column layouts, larger readable fonts, comfortable spacing
+   =========================== */
+@media (max-width: 599px) {
+
+  html, body {
+    font-size: 14.5px;
+  }
+
+   .products {
+    margin: 0 55px;
+  }
+
+  .container, .site-container, .wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 420px;
+  }
+
+  /* Force single column for most grids */
+  .grid, .cards-grid, .gallery {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Navigation: vertical, full width */
+  .navbar .nav-links, .nav, nav ul, .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Reduce hero padding and scale heading for mobile */
+  .hero, .banner {
+    padding: 1.75rem 0.5rem;
+  }
+
+  .hero h1, .hero .title {
+    font-size: 1.6rem;
+  }
+
+  /* Cards: tighter layout, actions shown as full-width buttons */
+  .card, .panel {
+    padding: 0.85rem;
+  }
+
+  .card .meta, .card .date {
+    font-size: 0.85rem;
+  }
+
+  /* Images in content should not exceed container */
+  .article img, .post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Buttons: ensure comfortable tap area */
+  button, .btn, .button {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  /* Reduce footer padding to keep content visible */
+  .footer, footer, .site-footer {
+    padding: 1.25rem 0.75rem;
+  }
+}
+
+/* ===========================
+   Small Mobile
+   max-width: 375px
+   Goal: final tightening for small phones — keep everything readable and tappable
+   =========================== */
+@media (max-width: 475px) {
+
+  html, body {
+    font-size: 14px;
+  }
+
+   .products {
+    margin: 0 30px;
+  }
+
+  .container, .site-container, .wrapper {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    max-width: 360px;
+  }
+
+  /* Ensure all multi-column components are single column */
+  .grid, .cards-grid, .gallery {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  /* Navbar: compact stack */
+  .navbar, header, .site-header {
+    padding: 0.55rem 0.6rem;
+  }
+
+  .navbar .nav-links, .nav, nav ul, .menu {
+    gap: 0.45rem;
+  }
+
+  /* Hero: reduce headings further */
+  .hero h1, .hero .title {
+    font-size: 1.45rem;
+  }
+
+  .hero, .banner {
+    padding: 1.25rem 0.5rem;
+  }
+
+  /* Buttons: keep minimum comfortable sizes */
+  button, .btn, .button {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.95rem;
+    min-height: 40px;
+  }
+
+  /* Very small images or icons: allow scaling but preserve clarity */
+  img.icon, .icon img {
+    width: auto;
+    height: 28px;
+  }
+
+  /* Reduce margins that could cause overflow */
+  .mt-large, .mb-large {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* ===========================
+   Optional utility tweaks to prevent horizontal overflow
+   These rules are safe and won't remove existing styles; they only
+   tighten elements that commonly cause horizontal scroll.
+   =========================== */
+
+/* Ensure long words / code blocks wrap */
+p, li, .text, .content, pre, code {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Prevent wide fixed-width elements from overflowing */
+table, .table, .wide-element {
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  display: block;
+}
+
+/* If you have very wide images inside slides/carousels, ensure they scale */
+.carousel img, .slider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   Notes
+   - Keep this file loaded after your main `style.css` so these rules override where necessary.
+   - If you have specific component classnames not covered above, add a matching override
+     in the same pattern inside the appropriate media query.
+   - Avoid using !important unless an override must defeat inline styles or extremely
+     specific rules; prefer placing this file after the main stylesheet.
+   =========================== */
